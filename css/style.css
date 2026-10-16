@@ -1682,3 +1682,173 @@ body[data-language="en"] .contact-item {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+
+/* FARTOOS INSTALLATION MAP */
+.installation-map {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    min-height: 400px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #eaf1f7;
+    z-index: 1;
+}
+
+
+
+.installation-map .leaflet-container {
+    width: 100%;
+    height: 100%;
+    font-family: "Vazirmatn", sans-serif;
+    background: #eaf1f7;
+    z-index: 1;
+}
+
+
+
+body[data-language="en"] .installation-map .leaflet-container {
+    font-family: "Inter", sans-serif;
+}
+
+
+
+.installation-map .leaflet-control-zoom a {
+    color: #0b2040;
+}
+
+
+
+.installation-map .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(7, 21, 44, 0.18);
+}
+
+
+
+.installation-map .leaflet-popup-content {
+    margin: 14px 16px;
+    line-height: 1.8;
+    min-width: 180px;
+}
+
+
+
+.installation-map .leaflet-tooltip {
+    border: 1px solid rgba(27, 105, 206, 0.2);
+    border-radius: 9px;
+    box-shadow: 0 5px 18px rgba(7, 21, 44, 0.15);
+    font-family: inherit;
+    line-height: 1.7;
+}
+
+
+
+.installation-map .leaflet-tooltip::before {
+    border-top-color: #ffffff;
+}
+
+
+
+.map-loading,
+.map-error {
+    padding: 18px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+
+
+.map-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 500;
+    display: grid;
+    place-items: center;
+    background: var(--surface-soft);
+}
+
+
+
+.map-error {
+    margin-top: 12px;
+    color: #c62828;
+    background: var(--surface);
+    border-radius: 10px;
+}
+
+
+
+.map-error[hidden] {
+    display: none;
+}
+
+
+
+.map-popup-title {
+    color: #1b69ce;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 7px;
+}
+
+
+
+.map-popup-row {
+    margin-top: 4px;
+    overflow-wrap: anywhere;
+}
+
+
+
+.map-popup-label {
+    font-weight: 700;
+}
+
+
+
+.map-popup-count {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 10px;
+    border-radius: 7px;
+    background: #eaf4ff;
+    color: #164389;
+    font-weight: 800;
+}
+
+
+
+@media (max-width: 768px) {
+    .installation-map {
+        height: 480px;
+        min-height: 360px;
+        border-radius: 12px;
+    }
+
+
+    
+    .map-wrapper {
+        padding: 12px;
+    }
+
+
+    
+    .map-header {
+        flex-wrap: wrap;
+        padding: 5px 5px 16px;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    .installation-map {
+        height: 420px;
+        min-height: 320px;
+    }
+}
+
