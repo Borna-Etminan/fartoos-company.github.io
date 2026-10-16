@@ -6,6 +6,11 @@
     <meta name="description" content="فرتوس اراک - طراحی و تولید راهبند و تجهیزات کنترل تردد">
     <title>FARTOOS | فرتوس</title>
     <link rel="icon" type="image/png" href="assets/icons/fartoos.png">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/style.css">
     <!-- Persian / Latin fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -179,23 +184,19 @@
                         </span>
                     </span>
                 </div>
-                <div class="iran-map-placeholder">
-                    <div class="map-grid"></div>
-                    <div class="map-center">
-                        <div class="map-pin map-pin-one"></div>
-                        <div class="map-pin map-pin-two"></div>
-                        <div class="map-pin map-pin-three"></div>
-                        <div class="map-placeholder-icon">
-                            IRAN
-                        </div>
-                        <span data-i18n="mapReserved">
-                            فضای اختصاصی نقشه ایران
-                        </span>
-                        <small data-i18n="mapReservedSmall">
-                            نقاط نصب بعداً به نقشه اضافه خواهند شد
-                        </small>
-                    </div>
+                <div
+                  id="installationMap"
+                  class="installation-map"
+                  role="application"
+                  aria-label="نقشه محل‌های نصب راهبند فرتوس"
+                >
+                  <div class="map-loading" id="mapLoading">
+                    در حال بارگذاری نقشه و اطلاعات محل‌های نصب...
+                  </div>
                 </div>
+                <p id="mapError" class="map-error" hidden>
+                  بارگذاری نقشه یا اطلاعات محل‌های نصب ناموفق بود.
+                </p>
             </div>
         </div>
     </section>
@@ -557,6 +558,10 @@
         </div>
     </footer>
     <script src="js/language.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
     <script src="js/main.js"></script>
 </body>
 </html>
