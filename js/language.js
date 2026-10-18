@@ -157,6 +157,12 @@ function applyLanguage(language) {
             : "ltr";
     document.body.dataset.language =
         selectedLanguage;
+   // Notify the map and other dynamic components about language changes
+   window.dispatchEvent(
+       new CustomEvent("fartoos:languagechange", {
+           detail: { language: selectedLanguage }
+       })
+   );
     localStorage.setItem(
         "fartoos-language",
         selectedLanguage
