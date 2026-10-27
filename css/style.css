@@ -1852,3 +1852,38 @@ body[data-language="en"] .installation-map .leaflet-container {
     }
 }
 
+
+
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+    transition: transform 0.35s ease;
+}
+
+
+
+.product-image:hover img {
+    transform: scale(1.04);
+}
+
+
+
+.product-image > span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
